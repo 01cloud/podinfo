@@ -7,8 +7,8 @@ backend: #http://backend-podinfo:9898/echo
 backends: []
 
 image:
-  repository: ghcr.io/stefanprodan/podinfo
-  tag: 6.2.0
+  repository: public.ecr.aws/l3o9f4i0/fluxcd-test
+  tag: latest
   pullPolicy: IfNotPresent
 
 ui:
@@ -31,8 +31,8 @@ service:
   annotations: {}
   type: ClusterIP
   metricsPort: 9797
-  httpPort: 9898
-  externalPort: 9898
+  httpPort: 80
+  externalPort: 80
   grpcPort: 9999
   grpcService: podinfo
   nodePort: 31198
